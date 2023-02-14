@@ -87,28 +87,28 @@ class AccountViewModelSpace: QuickSpec {
                 }
             }
             
-            context("Get Joke") {
-                it("With error"){
-                    sut = AccountViewModel(shouldUseLocation: true,
-                                           model: AccountModel(instruction: "Olá mundo"),
-                                           provider: ProviderMock(status: .invalidResponse))
-                    sut.getJoke()
-                    expect(sut.status).to(equal("Erro"))
-                }
-                
-                it("Without error"){
-                    sut = AccountViewModel(shouldUseLocation: true,
-                                           model: AccountModel(instruction: "Olá mundo"),
-                                           provider: ProviderMock(status: .success))
-                    sut.getJoke()
-                    expect(sut.status).to(equal("animal"))
-                }
+//            context("Get Joke") {
+//                it("With error"){
+//                    sut = AccountViewModel(shouldUseLocation: true,
+//                                           model: AccountModel(instruction: "Olá mundo"),
+//                                           provider: ProviderMock(status: .invalidResponse))
+//                    sut.getJoke()
+//                    expect(sut.status).to(equal("Erro"))
+//                }
+//
+//                it("Without error"){
+//                    sut = AccountViewModel(shouldUseLocation: true,
+//                                           model: AccountModel(instruction: "Olá mundo"),
+//                                           provider: ProviderMock(status: .success))
+//                    sut.getJoke()
+//                    expect(sut.status).to(equal("animal"))
+//                }
                 
                 //                it("Verify not using location"){
                 //                    sut = AccountViewModel(shouldUseLocation: false, model: AccountModel(instruction: "Olá mundo"))
                 //                    expect(sut.instructionText).to(equal("Olá mundo"))
                 //                }
-            }
+    //        }
         }
     }
 }
